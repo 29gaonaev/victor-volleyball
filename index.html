@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111a24" />
+    <meta name="description" content="Take your place on the court in a cinematic, playable 3D volleyball match." />
+    <title>Victor Volleyball — Beach Volleyball</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="game">
+      <div id="hud" class="hud hidden">
+        <header class="scoreboard">
+          <div class="brand"><span class="brand-mark">C</span><span>COURT<span class="brand-light">SIDE</span></span></div>
+          <div class="score-team"><span class="team-name">HARBOR</span><strong id="home-score">00</strong></div>
+          <div class="score-divider"><span class="live-dot"></span><span id="match-status">LIVE</span></div>
+          <div class="score-team away"><strong id="away-score">00</strong><span class="team-name">SOLAR</span></div>
+          <div class="set-indicator">SET <strong id="set-number">01</strong></div>
+        </header>
+        <div class="rally-badge"><span class="rally-icon">↗</span><span id="rally-label">FIRST SERVE</span><strong id="rally-time">00:00</strong><strong id="touch-count">0 / 3</strong></div>
+        <div id="point-callout" class="point-callout"></div>
+        <div class="controls-hint">
+          <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> MOVE</span>
+          <span><kbd>SHIFT</kbd> SPRINT</span>
+          <span><kbd>SPACE</kbd> JUMP / SPIKE</span>
+          <span><kbd>E</kbd> SET / HIT</span>
+          <span><kbd>Q</kbd> DIVE</span>
+          <span><kbd>C</kbd> CAMERA</span>
+        </div>
+      </div>
+      <div id="start-screen" class="overlay">
+        <div class="overlay-grain"></div>
+        <div class="start-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span>THE SUMMER SERIES · EST. 2025</div>
+          <h1>OWN<br />THE <span>COURT.</span></h1>
+          <p class="intro">The sand. The silence before the serve.<br />Your moment starts here.</p>
+          <div class="matchup">
+            <div class="team-card"><span class="team-dot home-dot"></span><div><small>HOME</small><strong>HARBOR</strong></div></div>
+            <span class="versus">VS</span>
+            <div class="team-card right"><div><small>AWAY</small><strong>SOLAR</strong></div><span class="team-dot away-dot"></span></div>
+          </div>
+          <button id="start-button" class="play-button"><span>STEP ONTO THE COURT</span><span class="button-arrow">↗</span></button>
+          <p class="start-note">FIRST TO 15 · WIN BY 2</p>
+        </div>
+        <div class="overlay-footer"><span>VICTOR VOLLEYBALL <span class="footer-divider">/</span> BEACH VOLLEYBALL</span><span>01 — SUMMER SERIES</span></div>
+      </div>
+      <div id="point-screen" class="point-screen hidden" aria-live="polite">
+        <span id="point-kicker" class="point-kicker">POINT</span>
+        <strong id="point-message">HARBOR SCORES</strong>
+        <span id="point-detail">A moment to reset.</span>
+        <button id="continue-button" class="continue-button">NEXT SERVE <span>→</span></button>
+      </div>
+      <div class="corner-note"><span class="corner-dot"></span>CHAMPIONSHIP COURT <span>·</span> SANTA MONICA, CA</div>
+      <div id="loading" class="loading"><span class="loading-mark">C</span><span>PREPARING THE COURT</span></div>
+      <div id="error-message" class="error-message hidden"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
