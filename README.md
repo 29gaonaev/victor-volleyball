@@ -2,6 +2,10 @@
 
 A browser-based, three-dimensional volleyball prototype built with Three.js and Vite. The court, ball, uniforms, and arena are generated in code, so the game does not depend on remote image or audio assets.
 
+## Play online
+
+Visit [Victor Volleyball on GitHub Pages](https://29gaonaev.github.io/victor-volleyball/).
+
 ## Run locally
 
 Install Node.js 18 or newer, then run:
